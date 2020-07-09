@@ -4,6 +4,10 @@ const KEYS = { ENTER: 13, ESC: 27, PAGEUP: 33, PAGEDOWN: 34, END: 35, HOME: 36, 
 const AJAX_DEBOUNCE = 500
 
 export default class CoreSuggest extends HTMLElement {
+  constructor(...args) {
+    return super(...args)
+  }
+  
   static get observedAttributes () { return ['hidden'] }
 
   connectedCallback () {

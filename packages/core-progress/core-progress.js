@@ -3,6 +3,10 @@
 import { addStyle, dispatchEvent, toggleAttribute } from '../utils'
 
 export default class CoreProgress extends HTMLElement {
+  constructor(...args) {
+    return super(...args)
+  }
+  
   static get observedAttributes () { return ['type', 'value', 'max'] }
 
   connectedCallback () {

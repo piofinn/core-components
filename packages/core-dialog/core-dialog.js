@@ -3,6 +3,10 @@ import { closest, dispatchEvent, toggleAttribute, queryAll } from '../utils'
 const FOCUSABLE = '[tabindex],a,button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled])'
 
 export default class CoreDialog extends HTMLElement {
+  constructor(...args) {
+    return super(...args)
+  }
+  
   static get observedAttributes () { return ['hidden', 'backdrop'] }
 
   connectedCallback () {

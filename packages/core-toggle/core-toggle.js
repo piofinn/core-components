@@ -1,6 +1,10 @@
 import { IS_ANDROID, IS_IOS, closest, dispatchEvent, getUUID, toggleAttribute } from '../utils'
 
 export default class CoreToggle extends HTMLElement {
+  constructor(...args) {
+    return super(...args)
+  }
+  
   static get observedAttributes () { return ['hidden'] }
 
   connectedCallback () {

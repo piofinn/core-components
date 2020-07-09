@@ -14,6 +14,10 @@ const requestJumps = IS_BROWSER && window.matchMedia && window.matchMedia('(pref
 const requestFrame = IS_BROWSER && (window.requestAnimationFrame || window.setTimeout)
 
 export default class CoreScroll extends HTMLElement {
+  constructor(...args) {
+    return super(...args)
+  }
+
   connectedCallback () {
     // Hide scrollbar in WebKit and default to display block
     addStyle(this.nodeName, `

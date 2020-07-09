@@ -6,6 +6,10 @@ const FROM = IS_ANDROID ? 'data-labelledby' : 'aria-labelledby' // Android has a
 const KEYS = { SPACE: 32, END: 35, HOME: 36, LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 }
 
 export default class CoreTabs extends HTMLElement {
+  constructor(...args) {
+    return super(...args)
+  }
+
   connectedCallback () {
     this.setAttribute('role', 'tablist')
     this.addEventListener('click', this)

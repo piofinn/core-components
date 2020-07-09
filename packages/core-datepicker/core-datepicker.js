@@ -7,6 +7,10 @@ const MONTHS = 'januar,februar,mars,april,mai,juni,juli,august,september,oktober
 const DAYS = 'man,tirs,ons,tors,fre,lør,søn'
 
 export default class CoreDatepicker extends HTMLElement {
+  constructor(...args) {
+    return super(...args)
+  }
+  
   static get observedAttributes () { return ['timestamp', 'months', 'days'] }
 
   connectedCallback () {
